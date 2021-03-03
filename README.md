@@ -1,6 +1,6 @@
 <br>
 <div align="center">
-  <img width="300" alt="NextJS-ChakraUI" src="./.github/Nextjs-ChakraUI.png" />
+  <img width="300" alt="NextJS-ChakraUI" src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/logo/logo-colored@2x.png?raw=true" />
 
   <h4 align="center">
      Next.js, declarative UI and design systems applied to ReactJS.
