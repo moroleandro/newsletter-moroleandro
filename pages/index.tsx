@@ -1,7 +1,9 @@
 import { useState, FormEvent } from 'react';
 import { Flex, Image, Button, Text } from '@chakra-ui/core'
+import Router from 'next/router'
 import Input from '../components/Input'
 import axios from 'axios';
+
 
 export default function Home() {
   const [name, setName] = useState('');
@@ -9,8 +11,13 @@ export default function Home() {
 
   function handleSignUpToNewsletter(event: FormEvent) {
     event.preventDefault();
+    if(!email || !name){
+      alert("Por favor preencha o campo nome e e-mail para prosseguir");
+      return null;
+    }
 
     axios.post('/api/subscribe', { name, email });
+    Router.push('/confirm');
   }
 
   return (
@@ -20,6 +27,7 @@ export default function Home() {
       justifyContent="center"
       alignItems="center"
     >
+      
       <Flex
         as="form"
         onSubmit={handleSignUpToNewsletter}
@@ -28,7 +36,6 @@ export default function Home() {
         flexDir="column"
         alignItems="stretch"
         padding={8}
-        marginTop={4}
         width="100%" 
         maxW="400px"
       >
@@ -49,6 +56,7 @@ export default function Home() {
         <Input
           placeholder="Seu principal e-mail"
           marginTop={2}
+          type="email"
           value={email}
           borderBottomColor="#4bd16f"
           onChange={e => setEmail(e.target.value)}

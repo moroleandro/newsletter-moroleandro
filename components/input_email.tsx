@@ -5,6 +5,7 @@ const Input: React.FC<ChakraInputProps> = (props) => {
   return (
     <ChakraInput 
       height="50px"
+      type="email"
       backgroundColor="gray.800"
       focusBorderColor="#4bd16f"
       borderRadius="sm"
