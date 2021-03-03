@@ -3,7 +3,7 @@
   <img width="300" alt="NextJS-ChakraUI" src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/logo/logo-colored@2x.png?raw=true" />
 
   <h4 align="center">
-     Next.js, declarative UI and design systems applied to ReactJS.
+     Newsletter example using Next.js + Serverless Functions Next.js + ChakraUI
   </h4>
 </div>
 
